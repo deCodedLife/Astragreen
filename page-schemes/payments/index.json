@@ -247,27 +247,13 @@
           "title": "Расходы",
           "body": [
             {
-              "title": "Список",
-              "type": "list",
+              "title": "Приход наличными",
+              "type": "analytic_widgets",
               "size": 4,
               "settings": {
-                "link": false,
-                "object": "expenses"
+                "widgets_group": "expenses_statistic"
               },
               "components": {
-                "buttons": [
-                  {
-                    "type": "modal",
-                    "settings": {
-                      "title": "Добавить расход",
-                      "background": "dark",
-                      "page": "payments/addExpense",
-                      "modal_size": "xl",
-                      "refresh_after_submit": true,
-                      "close_after_submit": true
-                    }
-                  }
-                ],
                 "filters": [
                   {
                     "title": "Дата (от)",
@@ -303,6 +289,41 @@
                       "donor_property_title": "title",
                       "donor_property_value": "id",
                       "recipient_property": "store_id"
+                    }
+                  },
+                  {
+                    "title": "Сотрудник",
+                    "type": "list",
+                    "settings": {
+                      "donor_object": "users",
+                      "donor_property_title": "last_name",
+                      "donor_property_value": "id",
+                      "recipient_property": "user_id"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Список",
+              "type": "list",
+              "size": 4,
+              "settings": {
+                "link": false,
+                "object": "expenses",
+                "linked_filter": "analytic_widgets_expenses_statistic"
+              },
+              "components": {
+                "buttons": [
+                  {
+                    "type": "modal",
+                    "settings": {
+                      "title": "Добавить расход",
+                      "background": "dark",
+                      "page": "payments/addExpense",
+                      "modal_size": "xl",
+                      "refresh_after_submit": true,
+                      "close_after_submit": true
                     }
                   }
                 ]

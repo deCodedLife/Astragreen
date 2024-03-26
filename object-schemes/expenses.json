@@ -4,6 +4,21 @@
   "is_trash": false,
   "properties": [
     {
+      "title": "№",
+      "article": "id",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_disabled": true,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add"
+      ]
+    },
+    {
       "title": "Заголовок",
       "article": "title",
       "data_type": "string",
@@ -78,6 +93,23 @@
         "table": "stores",
         "properties_title": "title"
       }
+    },
+    {
+      "title": "Документы",
+      "article": "files",
+      "data_type": "file",
+      "field_type": "file",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "settings": {
+        "is_multiply": true
+      },
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
     },
     {
       "title": "Сотрудник",

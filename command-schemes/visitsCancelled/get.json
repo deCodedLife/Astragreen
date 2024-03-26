@@ -1,8 +1,0 @@
-{
-  "title": "Вывод",
-  "type": "get",
-  "object_scheme": "visitsCancelled",
-  "required_permissions": [],
-  "required_modules": [],
-  "should_log": false
-}

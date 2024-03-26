@@ -1,0 +1,46 @@
+{
+  "title": "Действия",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Продажа",
+      "article": "sell",
+      "is_system": "Y"
+    },
+    {
+      "id": 2,
+      "title": "Возврат",
+      "article": "sellReturn",
+      "is_system": "Y"
+    },
+    {
+      "id": 3,
+      "title": "Пополнение депозита",
+      "article": "deposit",
+      "is_system": "Y"
+    },
+    {
+      "id": 4,
+      "title": "Расход",
+      "article": "expense",
+      "is_system": "Y"
+    }
+  ]
+}

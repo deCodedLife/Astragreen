@@ -1,7 +1,0 @@
-{
-  "title": "Завершение записи к врачу",
-  "type": "custom",
-  "object_scheme": "visits",
-  "required_permissions": [],
-  "required_modules": []
-}

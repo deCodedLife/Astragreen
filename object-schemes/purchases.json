@@ -1,1 +1,363 @@
-{"title":"Закупки","table":"purchases","is_trash":false,"properties":[{"title":"Дата","article":"created_at","data_type":"datetime","field_type":"datetime","is_default_in_list":true,"is_unique":false,"is_autofill":true,"use_in_commands":["get","add"]},{"title":"Поставщик","article":"provider_id","data_type":"integer","field_type":"list","is_default_in_list":true,"is_unique":false,"is_autofill":true,"list_donor":{"table":"providers","properties_title":"title"},"use_in_commands":["update","add","get"],"require_in_commands":["add"]},{"title":"Филиал","article":"store_id","data_type":"integer","field_type":"list","is_default_in_list":true,"is_unique":false,"is_autofill":true,"list_donor":{"table":"stores","properties_title":"title"},"use_in_commands":["update","get","add"],"require_in_commands":["add"]},{"title":"Тип закупки","article":"purchaseType","data_type":"string","field_type":"radio","is_default_in_list":false,"is_unique":false,"is_autofill":true,"is_hook":true,"custom_list":[{"title":"Товары","value":"products"},{"title":"Расходники","value":"consumables"}],"use_in_commands":["update","add","hook"],"is_disabled":false,"is_visible":true},{"title":"Стоимость закупки","article":"price","data_type":"float","field_type":"price","is_default_in_list":true,"is_unique":false,"is_autofill":true,"require_in_commands":["add"],"use_in_commands":["update","add"]},{"title":"Стоимость доставки","article":"deliveryPrice","data_type":"float","field_type":"price","is_default_in_list":false,"is_unique":false,"is_autofill":true,"use_in_commands":["update","add","hook"]},{"title":"Список товаров","article":"purchases_products","data_type":"array","field_type":"smart_list","is_default_in_list":false,"is_unique":false,"is_autofill":true,"is_visible":false,"is_hook":true,"use_in_commands":["add","hook"],"require_in_commands":[],"settings":{"connection_table":"purchases_products","properties":[{"title":"Товар","article":"product_id","data_type":"integer","field_type":"list","list_donor":{"table":"products","properties_title":"title"}},{"title":"Количество","article":"count","data_type":"integer","field_type":"integer"},{"title":"Стоимость","article":"price","data_type":"float","field_type":"float"},{"title":"Стоимость (шт.)","article":"priceOnce","data_type":"float","field_type":"price"}]}},{"title":"Список расходников","article":"purchases_consumables","data_type":"array","field_type":"smart_list","is_default_in_list":false,"is_unique":false,"is_autofill":true,"is_visible":false,"is_hook":true,"use_in_commands":["add","hook"],"require_in_commands":[],"settings":{"connection_table":"purchases_consumables","properties":[{"title":"Расходник","article":"consumable_id","data_type":"integer","field_type":"list","list_donor":{"table":"consumables","properties_title":"title"}},{"title":"Количество","article":"count","data_type":"integer","field_type":"integer"},{"title":"Стоимость","article":"price","data_type":"float","field_type":"float"},{"title":"Стоимость (шт.)","article":"priceOnce","data_type":"float","field_type":"price"}]}}],"action_buttons":[{"type":"script","settings":{"title":"Удалить","object":"purchases","command":"remove","data":{"id":":id"},"background":"dark","icon":"trash"}},{"type":"href","settings":{"title":"Изменить","page":"purchases/update/:id","icon":"gear","background":"dark"}}]}
+{
+  "title": "Закупки",
+  "table": "purchases",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Поставщик",
+      "article": "provider_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "list_donor": {
+        "table": "providers",
+        "properties_title": "title"
+      },
+      "use_in_commands": [
+        "update",
+        "add",
+        "get"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Номер накладной",
+      "article": "number",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "add",
+        "update"
+      ]
+    },
+    {
+      "title": "Дата проведения",
+      "article": "created_at",
+      "data_type": "datetime",
+      "field_type": "datetime",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "hook"
+      ],
+      "is_hook": true
+    },
+    {
+      "title": "День недели поставки",
+      "article": "weekday",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "get",
+        "add",
+        "update",
+        "hook"
+      ],
+      "custom_list": [
+        {
+          "title": "Понедельник",
+          "value": "Monday"
+        },
+        {
+          "title": "Вторник",
+          "value": "Tuesday"
+        },
+        {
+          "title": "Среда",
+          "value": "Wednesday"
+        },
+        {
+          "title": "Четверг",
+          "value": "Thursday"
+        },
+        {
+          "title": "Пятница",
+          "value": "Friday"
+        },
+        {
+          "title": "Суббота",
+          "value": "Saturday"
+        },
+        {
+          "title": "Воскресенье",
+          "value": "Sunday"
+        }
+      ]
+
+    },
+    {
+      "title": "Статус поставки",
+      "article": "status",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "update"
+      ],
+      "custom_list": [
+        {
+          "title": "Поступил",
+          "value": "enrolled"
+        },
+        {
+          "title": "Отправили",
+          "value": "sent"
+        },
+        {
+          "title": "Заказали",
+          "value": "ordered"
+        },
+        {
+          "title": "Проведен",
+          "value": "conducted"
+        },
+        {
+          "title": "Активная",
+          "value": "active"
+        },
+        {
+          "title": "Остатки отправлены на склад",
+          "value": "remains"
+        }
+      ]
+    },
+    {
+      "title": "Филиал",
+      "article": "store_id",
+      "data_type": "integer",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "list_donor": {
+        "table": "stores",
+        "properties_title": "title"
+      },
+      "use_in_commands": [
+        "update",
+        "get",
+        "add"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Доп. документы",
+      "article": "files",
+      "data_type": "file",
+      "field_type": "file",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "settings": {
+        "is_multiply": true
+      },
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Список товаров",
+      "article": "purchases_products",
+      "data_type": "array",
+      "field_type": "smart_list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_visible": true,
+      "use_in_commands": [
+        "add",
+        "update",
+        "hook"
+      ],
+      "is_hook": true,
+      "require_in_commands": [],
+      "settings": {
+        "connection_table": "purchases_products",
+        "properties": [
+          {
+            "title": "Товар",
+            "article": "product_id",
+            "data_type": "integer",
+            "field_type": "list",
+            "list_donor": {
+              "table": "products",
+              "properties_title": "title"
+            }
+          },
+          {
+            "title": "Количество",
+            "article": "count",
+            "data_type": "integer",
+            "field_type": "integer"
+          },
+          {
+            "title": "Скидка",
+            "article": "discount",
+            "data_type": "float",
+            "field_type": "float"
+          },
+          {
+            "title": "Себестоимость",
+            "article": "cost",
+            "data_type": "float",
+            "field_type": "float"
+          },
+          {
+            "title": "Сумма",
+            "article": "sum",
+            "data_type": "float",
+            "field_type": "float"
+          },
+          {
+            "title": "Цена продажи",
+            "article": "price",
+            "data_type": "float",
+            "field_type": "float"
+          },
+          {
+            "title": "Маржа",
+            "article": "margin",
+            "data_type": "float",
+            "field_type": "float"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Тип скидки",
+      "article": "saleType",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "update",
+        "add",
+        "get",
+        "hook"
+      ],
+      "custom_list": [
+        {
+          "title": "Фиксировано",
+          "value": "fixed"
+        },
+        {
+          "title": "Процент",
+          "value": "percent"
+        }
+      ]
+    },
+    {
+      "title": "Размер скидки",
+      "article": "saleSize",
+      "data_type": "float",
+      "field_type": "float",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "add",
+        "get"
+      ],
+      "is_disabled": true
+    },
+    {
+      "title": "Стоимость закупки",
+      "article": "price",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_hook": true,
+      "is_autofill": true,
+      "require_in_commands": [
+        "add"
+      ],
+      "use_in_commands": [
+        "update",
+        "add",
+        "hook"
+      ]
+    },
+    {
+      "title": "Стоимость доставки",
+      "article": "deliveryPrice",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_hook": true,
+      "use_in_commands": [
+        "update",
+        "add",
+        "hook"
+      ]
+    },
+    {
+      "title": "Комментарий",
+      "article": "comment",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "add",
+        "get"
+      ]
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "object": "purchases",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        },
+        "background": "dark",
+        "icon": "trash"
+      }
+    },
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": "purchases/update/:id",
+        "icon": "gear",
+        "background": "dark"
+      }
+    }
+  ]
+}

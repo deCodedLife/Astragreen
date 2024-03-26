@@ -23,7 +23,7 @@
       "buttons": [{
         "type": "href",
         "settings": {
-          "title": "Добавление филиала",
+          "title": "Добавление",
           "background": "dark",
           "page": "stores/add"
         }

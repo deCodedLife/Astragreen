@@ -1,77 +1,112 @@
 {
   "title": "Складские остатки",
   "table": "warehouses",
-  "is_trash": false,
+  "is_trash": true,
   "properties": [
     {
-      "title": "Филиал",
-      "article": "store_id",
-      "data_type": "integer",
-      "field_type": "list",
+      "title": "Изображение",
+      "article": "image",
+      "data_type": "image",
+      "field_type": "image",
       "is_default_in_list": true,
       "is_unique": false,
       "is_autofill": true,
       "use_in_commands": [
-        "get",
-        "update"
-      ],
-      "list_donor": {
-        "table": "stores",
-        "properties_title": "title"
-      }
+        "update",
+        "add",
+        "get"
+      ]
     },
     {
-      "title": "Количество",
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "require_in_commands": [
+        "add"
+      ],
+      "use_in_commands": [
+        "update",
+        "get",
+        "search",
+        "add"
+      ]
+    },
+    {
+      "title": "Цена продажи",
+      "article": "price",
+      "data_type": "float",
+      "field_type": "price",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "is_in_search": false,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add",
+        "hook"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "is_hook": true
+    },
+    {
+      "title": "Колличество",
       "article": "count",
       "data_type": "integer",
       "field_type": "integer",
       "is_default_in_list": true,
       "is_unique": false,
       "is_autofill": true,
+      "is_in_search": false,
       "use_in_commands": [
+        "update",
         "get",
-        "update"
-      ]
+        "add",
+        "hook"
+      ],
+      "require_in_commands": [
+        "add"
+      ],
+      "is_hook": true
     },
     {
-      "title": "Расходник",
-      "article": "consumable_id",
+      "title": "Производитель",
+      "article": "manufacturer_id",
       "data_type": "integer",
       "field_type": "list",
-      "is_default_in_list": false,
+      "is_default_in_list": true,
       "is_unique": false,
       "is_autofill": true,
       "use_in_commands": [
-        "get",
-        "update"
-      ]
-    },
-    {
-      "title": "Товар",
-      "article": "product_id",
-      "data_type": "integer",
-      "field_type": "list",
-      "is_default_in_list": false,
-      "is_unique": false,
-      "is_autofill": true,
-      "use_in_commands": [
-        "get",
-        "update"
-      ]
-    }
-  ],
-  "action_buttons": [
-    {
-      "type": "href",
-      "settings": {
-        "title": "Изменить",
-        "page": [
-          "warehouses/update/",
-          ":id"
-        ],
-        "icon": "gear",
-        "background": "dark"
+        "update",
+        "add",
+        "get"
+      ],
+      "list_donor": {
+        "table": "manufacturers",
+        "properties_title": "title"
       }
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "data_type": "string",
+      "field_type": "textarea",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "get",
+        "update",
+        "add"
+      ]
     }
   ]
 }

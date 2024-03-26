@@ -1,7 +1,0 @@
-{
-  "title": "Повторный прием пациента",
-  "type": "custom",
-  "object_scheme": "equipmentVisits",
-  "required_permissions": [],
-  "required_modules": []
-}

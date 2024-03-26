@@ -88,7 +88,7 @@ foreach ( $API->DB->from( "salesProductsList" )->where( "sale_id", $processedSal
 
 }
 
-if ( !$services ) $API->returnResponse( "Продажа {$processedSale[ "id" ]} не имеет услуг" );
+if ( !$services ) $API->returnResponse( [] ); // "Продажа {$processedSale[ "id" ]} не имеет услуг"
 
 
 $summary = $processedSale[ "summary" ] - $processedSale[ "sum_bonus" ];

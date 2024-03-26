@@ -30,6 +30,13 @@
       "is_required": "N"
     },
     {
+      "title": "Пароль",
+      "article": "password",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
       "title": "Телефон",
       "article": "phone",
       "type": "varchar(255)",
@@ -44,94 +51,10 @@
       "is_required": "N"
     },
     {
-      "title": "Адрес",
-      "article": "address",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
       "title": "Пол",
       "article": "gender",
       "type": "char(1)",
       "default": "M",
-      "is_required": "N"
-    },
-    {
-      "title": "Серия паспорта",
-      "article": "passport_series",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Номер паспорта",
-      "article": "passport_number",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Кем выдан паспорт",
-      "article": "passport_issued",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Имя",
-      "article": "present_first_name",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Фамилия",
-      "article": "present_last_name",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Отчество",
-      "article": "present_patronymic",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Серия паспорта",
-      "article": "present_passport_series",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Номер паспорта",
-      "article": "present_passport_number",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Кем выдан паспорт",
-      "article": "present_passport_issued",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Повторный",
-      "article": "is_repeat",
-      "type": "char(1)",
-      "default": "N",
-      "is_required": "N"
-    },
-    {
-      "title": "Комментарий",
-      "article": "comment",
-      "type": "varchar(255)",
-      "default": null,
       "is_required": "N"
     },
     {
@@ -142,31 +65,10 @@
       "is_required": "N"
     },
     {
-      "title": "Дата рождения",
-      "article": "birthday",
-      "type": "date",
-      "default": null,
-      "is_required": "N"
-    },
-    {
       "title": "Активность (Y/N)",
       "article": "is_acive",
       "type": "char(1)",
       "default": "Y",
-      "is_required": "Y"
-    },
-    {
-      "title": "Депозит",
-      "article": "deposit",
-      "type": "float",
-      "default": "0",
-      "is_required": "Y"
-    },
-    {
-      "title": "Бонусы",
-      "article": "bonuses",
-      "type": "float",
-      "default": "0",
       "is_required": "Y"
     },
     {
@@ -177,58 +79,9 @@
       "is_required": "N"
     },
     {
-      "title": "Подписан договор",
-      "article": "is_contract",
-      "type": "char(1)",
-      "default": "N",
-      "is_required": "N"
-    },
-    {
-      "title": "Рекламный канал",
-      "article": "advertise_id",
-      "type": "int",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Депозит",
-      "article": "deposit",
-      "type": "int",
-      "default": "0",
-      "is_required": "N"
-    },
-    {
-      "title": "Бонусы",
-      "article": "bonuses",
-      "type": "float",
-      "default": "0",
-      "is_required": "N"
-    },
-    {
-      "title": "Депозит - пополнение",
-      "article": "deposit_replenishment",
-      "type": "float",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Бонусы - пополнение",
-      "article": "bonuses_replenishment",
-      "type": "int",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Геолокация",
-      "article": "geolocation",
+      "title": "Комментарий",
+      "article": "comment",
       "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Есть законный представитель",
-      "article": "is_representative",
-      "type": "char(1)",
       "default": null,
       "is_required": "N"
     }

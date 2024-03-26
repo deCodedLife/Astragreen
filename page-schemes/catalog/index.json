@@ -1,0 +1,41 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "",
+        "title": [
+          "Каталог сайта"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "list",
+      "size": 4,
+      "settings": {
+        "object": "catalog"
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "script",
+            "settings": {
+              "title": "Обновить каталог",
+              "background": "dark",
+              "object": "catalog",
+              "command": "updateOnSite"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

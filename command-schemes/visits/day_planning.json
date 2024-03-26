@@ -1,7 +1,0 @@
-{
-  "title": "Дневное планирование",
-  "type": "day_planning",
-  "object_scheme": "visits",
-  "required_permissions": [],
-  "required_modules": []
-}

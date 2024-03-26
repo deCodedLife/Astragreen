@@ -1,7 +1,0 @@
-{
-  "title": "Список для отчёта по заплате",
-  "type": "get",
-  "object_scheme": "visits",
-  "required_permissions": [],
-  "required_modules": []  
-}

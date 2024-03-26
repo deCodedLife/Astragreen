@@ -1,0 +1,51 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Родительские группы",
+        "title": [
+          "Список родительских групп"
+        ]
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "parentCategory",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "title"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "href": "parentCategory"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

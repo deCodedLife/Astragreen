@@ -91,31 +91,6 @@
       "is_hook": true
     },
     {
-      "title": "Посещения",
-      "article": "visits_ids",
-      "data_type": "array",
-      "field_type": "list",
-      "is_default_in_list": false,
-      "is_unique": false,
-      "is_autofill": true,
-      "is_in_search": false,
-      "use_in_commands": [
-        "hook",
-        "add",
-        "return",
-        "update"
-      ],
-      "require_in_commands": [],
-      "join": {
-        "connection_table": "saleVisits",
-        "donor_table": "visits",
-        "property_article": "user_id",
-        "insert_property": "sale_id",
-        "filter_property": "visit_id"
-      },
-      "is_visible": false
-    },
-    {
       "title": "Клиент",
       "article": "client_id",
       "data_type": "integer",
@@ -222,10 +197,6 @@
       "is_default_in_list": true,
       "is_unique": false,
       "is_autofill": true,
-      "list_donor": {
-        "table": null,
-        "properties_title": null
-      },
       "use_in_commands": [
         "add",
         "hook",
@@ -513,24 +484,6 @@
       ]
     },
     {
-      "title": "Товары",
-      "article": "doca_services",
-      "data_type": "array",
-      "field_type": "info_strings",
-      "is_default_in_list": false,
-      "is_unique": false,
-      "is_autofill": false,
-      "use_in_commands": [
-        "hook",
-        "add",
-        "update"
-      ],
-      "list_donor": {
-        "table": "services",
-        "properties_title": "title"
-      }
-    },
-    {
       "title": "Объект",
       "article": "object",
       "data_type": "string",
@@ -547,7 +500,7 @@
     },
     {
       "title": "Товары",
-      "article": "doca_products",
+      "article": "astragreen_products",
       "data_type": "array",
       "field_type": "smart_list",
       "is_default_in_list": false,

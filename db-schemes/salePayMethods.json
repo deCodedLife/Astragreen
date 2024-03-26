@@ -1,0 +1,46 @@
+{
+  "title": "Роли",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(75)",
+      "is_required": true,
+      "default": null
+    }
+  ],
+  "rows_key": "article",
+  "rows": [
+    {
+      "id": 1,
+      "title": "Наличные",
+      "article": "cash",
+      "is_system": "Y"
+    },
+    {
+      "id": 2,
+      "title": "Безналичные",
+      "article": "card",
+      "is_system": "Y"
+    },
+    {
+      "id": 3,
+      "title": "Раздельная",
+      "article": "parts",
+      "is_system": "Y"
+    },
+    {
+      "id": 4,
+      "title": "Юридическое лицо",
+      "article": "legalEntity",
+      "is_system": "Y"
+    }
+  ]
+}

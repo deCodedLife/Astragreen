@@ -1,1 +1,162 @@
-{"title":"Филиалы","table":"stores","is_trash":true,"properties":[{"title":"Название","article":"title","data_type":"string","field_type":"string","is_default_in_list":true,"is_unique":true,"is_autofill":true,"use_in_commands":["add","update"],"require_in_commands":["add"]},{"title":"График работы (от)","article":"schedule_from","data_type":"time","field_type":"time","is_default_in_list":false,"is_unique":false,"is_autofill":true,"use_in_commands":["add","update"]},{"title":"График работы (до)","article":"schedule_to","data_type":"time","field_type":"time","is_default_in_list":false,"is_unique":false,"is_autofill":true,"use_in_commands":["add","update"]},{"title":"Есть электронная очередь","article":"is_queue","data_type":"boolean","field_type":"checkbox","is_default_in_list":false,"is_unique":false,"is_autofill":true,"use_in_commands":["get","update","add"]},{"title":"Сотрудники","article":"users_id","data_type":"array","field_type":"list","is_default_in_list":false,"is_unique":false,"is_autofill":false,"join":{"connection_table":"users_stores","donor_table":"users","property_article":"last_name","insert_property":"store_id","filter_property":"user_id"}},{"title":"Есть операционный кабинет","article":"is_operating","data_type":"boolean","field_type":"checkbox","is_default_in_list":false,"is_unique":false,"is_autofill":true,"use_in_commands":["update","get","add"]}],"action_buttons":[{"type":"href","settings":{"title":"Изменить","page":["stores/update/",":id"],"icon":"gear","background":"dark"}},{"type":"script","settings":{"title":"Удалить","background":"dark","icon":"trash","object":"stores","command":"remove","data":{"id":":id"}}}]}
+{
+  "title": "Склады/Магазины",
+  "table": "stores",
+  "is_trash": true,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": true,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Индекс",
+      "article": "post_index",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "data_type": "string",
+      "field_type": "phone",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "data_type": "string",
+      "field_type": "email",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Район",
+      "article": "district",
+      "data_type": "string",
+      "field_type": "dadata_address",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Город",
+      "article": "city",
+      "data_type": "string",
+      "field_type": "dadata_city",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Область",
+      "article": "region",
+      "data_type": "string",
+      "field_type": "dadata_region",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    },
+    {
+      "title": "Страна",
+      "article": "country",
+      "data_type": "string",
+      "field_type": "dadata_country",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "update"
+      ],
+      "require_in_commands": []
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "stores/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "stores",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

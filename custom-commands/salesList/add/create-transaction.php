@@ -53,25 +53,29 @@ $saleID = $API->DB->insertInto( "salesList" )
  *  Заполнение посещений транзакции
  */
 
-foreach ( $requestData->visits_ids ?? [] as $visit ) {
+foreach ( $requestData->visits_ids ?? [] as $key => $visits ) {
 
-    $table = ( $requestData->object ?? "visits" ) === "equipmentVisits" ? "salesEquipmentVisits" : "saleVisits";
+    foreach ( $visits as $visit ) {
 
-    $API->DB->insertInto( $table )
-        ->values( [
-            "sale_id" => $saleID,
-            "visit_id" => $visit
-        ] )
-        ->execute();
+        $table = ( $key ?? "visits" ) === "equipmentVisits" ? "salesEquipmentVisits" : "saleVisits";
 
-    if ( $requestData->pay_method != "legalEntity" ) continue;
+        $API->DB->insertInto( $table )
+            ->values( [
+                "sale_id" => $saleID,
+                "visit_id" => $visit
+            ] )
+            ->execute();
 
-    $API->DB->update( "visits" )
-        ->set( [
-            "visits.is_payed" => 'Y'
-        ] )
-        ->where( "id", $visit )
-        ->execute();
+        if ( $requestData->pay_method != "legalEntity" ) continue;
+
+        $API->DB->update( "visits" )
+            ->set( [
+                "visits.is_payed" => 'Y'
+            ] )
+            ->where( "id", $visit )
+            ->execute();
+
+    }
 
 
 } // foreach. $requestData->visits_ids as $visit
@@ -84,6 +88,8 @@ foreach ( $requestData->products as $product ) {
 
     $product = (array) $product;
     $product[ "sale_id" ] = $saleID;
+
+    if ( !$product[ "product_id" ] ) continue;
 
     $API->DB->insertInto( "salesProductsList" )
         ->values( $product )

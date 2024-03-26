@@ -1,7 +1,0 @@
-{
-  "title": "Добавление",
-  "type": "add",
-  "object_scheme": "services",
-  "required_permissions": ["services_add"],
-  "required_modules": []
-}

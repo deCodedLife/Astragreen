@@ -1,7 +1,0 @@
-{
-  "title": "Добавление",
-  "type": "add",
-  "object_scheme": "wearableEquipment",
-  "required_permissions": ["users_add"],
-  "required_modules": []
-}

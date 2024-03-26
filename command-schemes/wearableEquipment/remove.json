@@ -1,8 +1,0 @@
-{
-  "title": "Удаление",
-  "type": "remove",
-  "object_scheme": "wearableEquipment",
-  "required_permissions": ["users_remove"],
-  "required_modules": [],
-  "should_log": false
-}

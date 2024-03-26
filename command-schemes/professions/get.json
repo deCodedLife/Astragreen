@@ -1,7 +1,0 @@
-{
-  "title": "Вывод",
-  "type": "get",
-  "object_scheme": "professions",
-  "required_permissions": ["settings_professions"],
-  "required_modules": []
-}

@@ -1,31 +1,59 @@
 {
-  "title": "Склады расходников",
+  "title": "Каталог",
   "properties": [
     {
-      "title": "Филиал",
-      "article": "store_id",
-      "type": "int",
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "is_required": false,
+      "default": "Y"
+    },
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Изображение",
+      "article": "image",
+      "type": "varchar(255)",
       "default": null,
       "is_required": "N"
     },
     {
-      "title": "Расходник",
-      "article": "consumable_id",
-      "type": "int",
+      "title": "Цена продажи",
+      "article": "price",
+      "type": "float",
       "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Товар",
-      "article": "product_id",
-      "type": "int",
-      "default": null,
-      "is_required": "N"
+      "is_required": "Y"
     },
     {
       "title": "Колличество",
       "article": "count",
-      "type": "int",
+      "type": "integer",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Производитель",
+      "article": "manufacturer_id",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "text",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Потставка",
+      "article": "supply",
+      "type": "varchar(75)",
       "default": null,
       "is_required": "N"
     }

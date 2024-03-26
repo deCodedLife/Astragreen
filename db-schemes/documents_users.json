@@ -1,1 +1,0 @@
-{"title":"Документы - сотрудники","properties":[{"title":"ID документа","article":"document_id","type":"varchar(15)","default":null,"is_required":"N"},{"title":"ID сотрудника","article":"user_id","type":"varchar(15)","default":null,"is_required":"N"}]}

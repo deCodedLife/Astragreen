@@ -1,8 +1,0 @@
-{
-  "title": "Передача графика на сайт",
-  "type": "custom",
-  "object_scheme": "workDays",
-  "required_permissions": [],
-  "required_modules": [],
-  "should_log": false
-}

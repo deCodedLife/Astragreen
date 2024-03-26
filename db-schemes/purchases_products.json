@@ -1,1 +1,61 @@
-{"title":"Закупки - Товары","properties":[{"title":"Закупка","article":"row_id","type":"int","default":null,"is_required":"Y"},{"title":"Товар","article":"product_id","type":"int","default":null,"is_required":"Y"},{"title":"Количество","article":"count","type":"int","default":1,"is_required":"Y"},{"title":"Стоимость","article":"price","type":"float","default":0,"is_required":"N"},{"title":"Стоимость (шт.)","article":"priceOnce","type":"float","default":0,"is_required":"N"}]}
+{
+  "title": "Закупки - Товары",
+  "properties": [
+    {
+      "title": "Закупка",
+      "article": "row_id",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Товар",
+      "article": "product_id",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Количество",
+      "article": "count",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Скидка",
+      "article": "discount",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Себестоимость",
+      "article": "cost",
+      "type": "float",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Сумма",
+      "article": "sum",
+      "type": "float",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Маржа",
+      "article": "margin",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    },
+    {
+      "title": "Цена продажи",
+      "article": "price",
+      "type": "int",
+      "default": 1,
+      "is_required": "N"
+    }
+  ]
+}

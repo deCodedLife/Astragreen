@@ -1,0 +1,66 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Производители - Добавление",
+        "title": [
+          "Добавление производителей"
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "href",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "page": [
+                "manufacturers/add"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "manufacturers",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "title",
+                  "description"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Добавить",
+              "background": "dark",
+              "href": "manufacturers"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

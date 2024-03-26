@@ -1,7 +1,0 @@
-{
-  "title": "Удаление",
-  "type": "remove",
-  "object_scheme": "professions",
-  "required_permissions": ["settings_professions"],
-  "required_modules": []
-}

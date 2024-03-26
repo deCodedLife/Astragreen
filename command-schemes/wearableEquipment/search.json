@@ -1,8 +1,0 @@
-{
-  "title": "Поиск",
-  "type": "search",
-  "object_scheme": "wearableEquipment",
-  "required_permissions": [],
-  "required_modules": [],
-  "should_log": false
-}

@@ -1,8 +1,0 @@
-{
-  "title": "Импорт справочников",
-  "type": "custom",
-  "object_scheme": "import",
-  "required_modules": [],
-  "required_permissions": [],
-  "no_limit": true
-}

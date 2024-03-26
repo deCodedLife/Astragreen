@@ -1,7 +1,0 @@
-{
-  "title": "Добавление",
-  "type": "add",
-  "object_scheme": "orderPayHistory",
-  "required_modules": [],
-  "required_permissions": []
-}

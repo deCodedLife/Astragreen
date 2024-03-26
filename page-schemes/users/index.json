@@ -7,9 +7,9 @@
       "type": "header",
       "size": 4,
       "settings": {
-        "description": "Сотрудники",
+        "description": "Страница сотрудника предоставляет исчерпывающую информацию, позволяя легко редактировать и оперативно получать необходимые данные.",
         "title": [
-          "Сотрудники"
+          "Все сотрудники"
         ]
       },
       "components": {}
@@ -33,16 +33,6 @@
               "donor_object": "roles",
               "donor_property_title": "title",
               "donor_property_value": "id"
-            }
-          },
-          {
-            "title": "Специальность",
-            "type": "list",
-            "settings": {
-              "donor_object": "professions",
-              "donor_property_title": "title",
-              "donor_property_value": "id",
-              "recipient_property": "professions_id"
             }
           },
           {

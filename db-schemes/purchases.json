@@ -1,1 +1,89 @@
-{"title":"Закупки","properties":[{"title":"Поставщик","article":"provider_id","type":"int","default":null,"is_required":"Y"},{"title":"Филиал","article":"store_id","type":"int","default":null,"is_required":"Y"},{"title":"Тип закупки","article":"purchaseType","type":"varchar(15)","default":"products","is_required":"N"},{"title":"Стоимость закупки","article":"price","type":"float","default":null,"is_required":"Y"},{"title":"Стоимость доставки","article":"deliveryPrice","type":"float","default":null,"is_required":"N"},{"title":"Дата","article":"created_at","type":"datetime","default":"CURRENT_TIMESTAMP","is_required":"N"}]}
+{
+  "title": "Закупки",
+  "properties": [
+    {
+      "title": "Поставщик",
+      "article": "provider_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Филиал",
+      "article": "store_id",
+      "type": "int",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Номер накладной",
+      "article": "number",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "День недели поставки",
+      "article": "weekday",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Статус",
+      "article": "status",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Тип скидки",
+      "article": "saleType",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Тип скидки",
+      "article": "saleSize",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Файлы",
+      "article": "files",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Комментарий",
+      "article": "comment",
+      "type": "text",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Стоимость закупки",
+      "article": "price",
+      "type": "float",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Стоимость доставки",
+      "article": "deliveryPrice",
+      "type": "float",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Дата",
+      "article": "created_at",
+      "type": "datetime",
+      "default": "CURRENT_TIMESTAMP",
+      "is_required": "N"
+    }
+  ]
+}

@@ -1,7 +1,0 @@
-{
-  "title": "Редактирование",
-  "type": "update",
-  "object_scheme": "serviceReports",
-  "required_permissions": [],
-  "required_modules": []
-}

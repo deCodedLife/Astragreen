@@ -1,0 +1,58 @@
+{
+  "required_modules": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Каталог - Добавление",
+        "title": [
+          "Добавление товара на сайт"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "catalog",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "image",
+                  "title",
+                  "price",
+                  "count",
+                  "manufacturer_id",
+                  "description"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "catalog"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

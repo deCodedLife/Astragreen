@@ -1,1 +1,26 @@
-{"title":"Категории товаров","properties":[{"title":"Название","article":"title","type":"varchar(75)","default":null,"is_required":"Y"}]}
+{
+  "title": "Категории товаров",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Код",
+      "article": "code",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Родительская категория",
+      "article": "parentCategory_id",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "N"
+    }
+  ]
+}

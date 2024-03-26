@@ -1,1 +1,84 @@
-{"title":"Категории товаров","table":"productCategories","is_trash":false,"properties":[{"title":"Название","article":"title","data_type":"string","field_type":"string","is_default_in_list":true,"is_unique":false,"is_autofill":true,"use_in_commands":["add","get","update"],"require_in_commands":["add"]}],"action_buttons":[{"type":"href","settings":{"title":"Изменить","page":["productCategories/update/",":id"],"icon":"gear","background":"dark"}},{"type":"script","settings":{"title":"Удалить","background":"dark","icon":"trash","object":"productCategories","command":"remove","data":{"id":":id"}}}]}
+{
+  "title": "Категории товаров",
+  "table": "productCategories",
+  "is_trash": false,
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": true,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "add",
+        "get",
+        "update"
+      ],
+      "require_in_commands": [
+        "add"
+      ]
+    },
+    {
+      "title": "Код",
+      "article": "code",
+      "data_type": "string",
+      "field_type": "string",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add"
+      ]
+    },
+    {
+      "title": "Родительская категория",
+      "article": "parentCategory_id",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "update",
+        "get",
+        "add"
+      ],
+      "custom_list": [],
+      "list_donor": {
+        "table": "parentCategory",
+        "properties_title": "title"
+      }
+    }
+  ],
+  "action_buttons": [
+    {
+      "type": "href",
+      "settings": {
+        "title": "Изменить",
+        "page": [
+          "productCategories/update/",
+          ":id"
+        ],
+        "icon": "gear",
+        "background": "dark"
+      }
+    },
+    {
+      "type": "script",
+      "settings": {
+        "title": "Удалить",
+        "background": "dark",
+        "icon": "trash",
+        "object": "productCategories",
+        "command": "remove",
+        "data": {
+          "id": ":id"
+        }
+      }
+    }
+  ]
+}

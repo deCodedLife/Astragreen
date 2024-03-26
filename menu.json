@@ -2,42 +2,14 @@
   "top": [],
   "side": [
     {
-      "title": "Dashboard",
+      "title": "Панель",
       "href": "dashboard",
       "children": [],
       "icon": "dashboard",
       "required_permissions": [ "director_schedule" ]
     },
     {
-      "title": "Расписание",
-      "href": "dashboard",
-      "children": [],
-      "icon": "schedule",
-      "available_permissions": [ "manager_schedule", "doctor_schedule" ]
-    },
-    {
-      "title": "Расписание",
-      "href": "managerSchedule",
-      "children": [],
-      "icon": "schedule",
-      "required_permissions": [ "manager_section" ]
-    },
-    {
-      "title": "Оборудование",
-      "href": "equipmentSchedule",
-      "children": [],
-      "icon": "health",
-      "required_permissions": [ "equipment_section" ]
-    },
-    {
-      "title": "Операционная",
-      "href": "operating",
-      "children": [],
-      "icon": "surgical-instrument",
-      "required_permissions": [ "operating_section" ]
-    },
-    {
-      "title": "Сотрудники",
+      "title": "Пользователи",
       "href": "users",
       "children": [],
       "icon": "id-card",
@@ -51,46 +23,48 @@
       "required_permissions": [ "clients_get" ]
     },
     {
-      "title": "Услуги",
-      "href": "services",
-      "children": [],
-      "icon": "stethoscope",
-      "required_permissions": [ "services_get" ]
-    },
-    {
-      "title": "Товары",
-      "href": "products",
-      "children": [],
+      "title": "Товарный учет",
       "icon": "shopping-basket",
-      "required_permissions": [ "products_get" ]
+      "href": "catalog",
+      "children": [
+        {
+          "title": "Товары",
+          "href": "products",
+          "children": [],
+          "required_permissions": [ "products_get" ]
+        },
+        {
+          "title": "Закупки",
+          "href": "purchases",
+          "children": [],
+          "required_permissions": [ "purchases_get" ]
+        },
+        {
+          "title": "Касса",
+          "href": "payments",
+          "children": [],
+          "required_permissions": [ "products_get" ]
+        },
+        {
+          "title": "Склад",
+          "href": "warehouses",
+          "children": [],
+          "required_permissions": [  ]
+        },
+        {
+          "title": "Каталог",
+          "href": "catalog",
+          "children": [],
+          "required_permissions": [ "products_get" ]
+        }
+      ]
     },
     {
-      "title": "Склад",
-      "href": "consumables",
-      "children": [],
-      "icon": "delivery",
-      "required_permissions": [ "consumables_get" ]
-    },
-    {
-      "title": "Справочники",
-      "href": "handbook",
-      "children": [],
-      "icon": "reading",
-      "required_permissions": [ "handbook_get" ]
-    },
-    {
-      "title": "Электронная очередь",
-      "href": "queue",
-      "children": [],
-      "icon": "tag-2",
-      "required_permissions": [ "queue_get" ]
-    },
-    {
-      "title": "Закупки",
-      "href": "purchases",
+      "title": "Расходы",
+      "href": "expenses",
       "children": [],
       "icon": "fast-delivery",
-      "required_permissions": [ "purchases_get" ]
+      "required_permissions": [ "expenses_get" ]
     },
     {
       "title": "Отчеты",
@@ -114,25 +88,11 @@
       "required_permissions": [ "promotions_get" ]
     },
     {
-      "title": "Бонусы",
-      "href": "bonus",
-      "children": [],
-      "icon": "tag",
-      "required_permissions": [ "bonuses_get" ]
-    },
-    {
       "title": "Шаблоны документов",
       "href": "documents",
       "children": [],
       "icon": "files",
       "required_permissions": [ "documents_get" ]
-    },
-    {
-      "title": "Касса",
-      "href": "payments",
-      "children": [],
-      "icon": "e-commerce",
-      "required_permissions": [ "payments_get" ]
     },
     {
       "title": "Настройки",
@@ -149,19 +109,14 @@
           "required_permissions": [ "settings_consumable_groups" ]
         },
         {
-          "title": "Группы товаров",
-          "href": "productCategories",
+          "title": "Родительские категории товаров",
+          "href": "parentCategory",
           "required_permissions": [ "settings_product_categories" ]
         },
         {
-          "title": "Группы услуг",
-          "href": "serviceGroups",
-          "required_permissions": [ "settings_services_groups" ]
-        },
-        {
-          "title": "Кабинеты",
-          "href": "cabinets",
-          "required_permissions": [ "settings_cabinets" ]
+          "title": "Категории товаров",
+          "href": "productCategories",
+          "required_permissions": [ "settings_product_categories" ]
         },
         {
           "title": "Категории расходников",
@@ -169,29 +124,14 @@
           "required_permissions": [ "settings_consumable_categories" ]
         },
         {
-          "title": "Носимое оборудование",
-          "href": "wearableEquipment",
-          "required_permissions": [ "settings_wearable_equipment" ]
-        },
-        {
           "title": "Основное",
           "href": "settings",
           "required_permissions": [ "settings_main" ]
         },
         {
-          "title": "Поставщики",
+          "title": "Поставщики/Партнёры",
           "href": "providers",
           "required_permissions": [ "settings_providers" ]
-        },
-        {
-          "title": "Причины отмены посещений",
-          "href": "cancelReasons",
-          "required_permissions": [ "settings_cancel_reasons" ]
-        },
-        {
-          "title": "Рекламные каналы",
-          "href": "advertise",
-          "required_permissions": [ "settings_advert_types" ]
         },
         {
           "title": "Роли",
@@ -199,9 +139,9 @@
           "required_permissions": [ "settings_roles" ]
         },
         {
-          "title": "Специальности",
-          "href": "professions",
-          "required_permissions": [ "settings_professions" ]
+          "title": "Филиалы",
+          "href": "stores",
+          "required_permissions": [ "settings_stores" ]
         },
         {
           "title": "Типы расходов",
@@ -209,24 +149,13 @@
           "required_permissions": [ "settings_expense_types" ]
         },
         {
-          "title": "Типы справочников",
-          "href": "handbookTypes",
-          "required_permissions": [ "settings_handbook_types" ]
-        },
-        {
           "title": "Темы задач",
           "href": "taskGroups",
           "required_permissions": [ "settings_task_themes" ]
         },
         {
-          "title": "Филиалы",
-          "href": "stores",
-          "required_permissions": [ "settings_stores" ]
-        },
-        {
-          "title": "Юридические лица",
-          "href": "legalEntities",
-          "required_permissions": [ "settings_stores" ]
+          "title": "Производители",
+          "href": "manufacturers"
         }
       ],
       "icon": "gear"

@@ -1,8 +1,0 @@
-{
-  "title": "Добавление",
-  "type": "add",
-  "object_scheme": "visits_services",
-  "modules": [],
-  "permissions": [],
-  "should_log": false
-}

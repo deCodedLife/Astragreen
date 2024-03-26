@@ -1,0 +1,51 @@
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Редактирование",
+        "title": [
+          ":title"
+        ]
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "parentCategory",
+        "command": "update",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "",
+                "fields": [
+                  "title"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "parentCategory"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

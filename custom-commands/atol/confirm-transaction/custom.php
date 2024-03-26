@@ -33,6 +33,12 @@ $API->DB->update( "visits" )
     ->where( "saleVisits.sale_id", $requestData->sale_id )
     ->execute();
 
+$API->DB->update( "equipmentVisits" )
+    ->innerJoin( "salesEquipmentVisits ON salesEquipmentVisits.visit_id = equipmentVisits.id" )
+    ->set( "equipmentVisits.is_payed", $saleDetails[ "action" ] == "sellReturn" ? 'N' : 'Y' )
+    ->where( "salesEquipmentVisits.sale_id", $requestData->sale_id )
+    ->execute();
+
 
 $clientDetails = $API->DB->from( "clients" )
     ->where( "id", $saleDetails[ "client_id" ] )

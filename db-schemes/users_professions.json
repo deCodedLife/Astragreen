@@ -1,1 +1,0 @@
-{"title":"Сотрудники - Профессии","properties":[{"title":"Сотрудник","article":"user_id","type":"int","default":null,"is_required":"Y"},{"title":"Специальность","article":"profession_id","type":"int","default":null,"is_required":"Y"}]}

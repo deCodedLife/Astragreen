@@ -1,1 +1,0 @@
-{"title":"Добавить причину отмены посещения","type":"add","object_scheme":"cancelReasons","modules":[],"required_permissions":["settings_cancel_reasons"],"no_limit":true}

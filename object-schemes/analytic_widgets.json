@@ -17,6 +17,7 @@
         "userServices",
         "visit_clients",
         "salary_info",
+        "expenses_statistic",
         "userCalls"
       ],
       "list_donor": {
@@ -39,6 +40,7 @@
         "advertise",
         "clients",
         "salary_info",
+        "expenses_statistic",
         "sales_statistic",
         "visit_clients",
         "client_statistic",
@@ -66,6 +68,7 @@
         "visit_clients",
         "client_statistic",
         "userCalls",
+        "expenses_statistic",
         "advertise_fixed",
         "cashbox"
       ]
@@ -186,6 +189,7 @@
         "userServices",
         "daily_report",
         "advertise",
+        "expenses_statistic",
         "clients",
         "sales_statistic",
         "visit_clients",
@@ -307,8 +311,8 @@
       }
     },
     {
-      "title": "Тип оплаты",
-      "article": "action",
+      "title": "Тип операции",
+      "article": "pay_method",
       "data_type": "string",
       "field_type": "list",
       "is_default_in_list": false,
@@ -319,6 +323,22 @@
       ],
       "list_donor": {
         "table": "payment_types",
+        "properties_title": "title"
+      }
+    },
+    {
+      "title": "Тип",
+      "article": "action",
+      "data_type": "string",
+      "field_type": "list",
+      "is_default_in_list": false,
+      "is_unique": false,
+      "is_autofill": true,
+      "use_in_commands": [
+        "expenses_statistic"
+      ],
+      "list_donor": {
+        "table": "expensTypes",
         "properties_title": "title"
       }
     }

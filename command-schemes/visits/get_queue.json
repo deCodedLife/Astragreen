@@ -1,7 +1,0 @@
-{
-  "title": "Получение электронной очереди",
-  "type": "custom",
-  "object_scheme": "visits",
-  "required_permissions": [],
-  "required_modules": []
-}

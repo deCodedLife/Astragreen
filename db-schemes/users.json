@@ -51,55 +51,6 @@
       "is_required": "N"
     },
     {
-      "title": "Логин ДомРу",
-      "article": "domru_login",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Серия паспорта",
-      "article": "passport_series",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Номер паспорта",
-      "article": "passport_number",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Кем выдан паспорт",
-      "article": "passport_issued",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "СНИЛС",
-      "article": "snils",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "ИНН",
-      "article": "inn",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Адрес",
-      "article": "address",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
       "title": "Телефон",
       "article": "phone",
       "type": "varchar(255)",
@@ -107,45 +58,10 @@
       "is_required": "N"
     },
     {
-      "title": "Дополнительный телефон",
-      "article": "second_phone",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Комментарий",
-      "article": "comment",
-      "type": "varchar(255)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Пол",
-      "article": "gender",
-      "type": "char(1)",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Дата рождения",
-      "article": "birthday",
-      "type": "date",
-      "default": null,
-      "is_required": "N"
-    },
-    {
-      "title": "Активность (Y/N)",
-      "article": "is_active",
-      "type": "char(1)",
-      "default": "Y",
-      "is_required": "Y"
-    },
-    {
-      "title": "Выводить в Расписании",
-      "article": "is_visible_in_schedule",
-      "type": "char(1)",
-      "default": "N",
+      "title": "Дата начисления зарплаты",
+      "article": "salary_date",
+      "type": "datetime",
+      "default": "",
       "is_required": "N"
     },
     {
@@ -156,18 +72,11 @@
       "is_required": "N"
     },
     {
-      "title": " Зарплата с процентом от продаж",
-      "article": "is_percent",
+      "title": "Активность (Y/N)",
+      "article": "is_active",
       "type": "char(1)",
-      "default": "N",
-      "is_required": "N"
-    },
-    {
-      "title": "Тип оклада",
-      "article": "salary_type",
-      "type": "varchar(75)",
-      "default": null,
-      "is_required": "N"
+      "default": "Y",
+      "is_required": "Y"
     }
   ]
 }

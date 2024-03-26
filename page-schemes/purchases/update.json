@@ -23,19 +23,44 @@
         "command": "update",
         "areas": [
           {
-            "size": 4,
+            "size": 2,
             "blocks": [
               {
                 "title": "Основная информация",
                 "fields": [
-                  "created_at",
-                  "store_id",
                   "provider_id",
-                  "purchaseType",
-                  "purchases_products",
-                  "purchases_consumables",
+                  "number",
+                  "created_at",
+                  "status",
+                  "store_id",
+                  "weekday"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Детали заказа",
+                "fields": [
+                  "saleType",
+                  "saleSize",
+                  "price",
                   "deliveryPrice",
-                  "price"
+                  "files"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 4,
+            "blocks": [
+              {
+                "title": "Товары",
+                "fields": [
+                  "purchases_products",
+                  "comment"
                 ]
               }
             ]

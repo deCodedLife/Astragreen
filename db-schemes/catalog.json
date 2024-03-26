@@ -1,0 +1,61 @@
+{
+  "title": "Каталог",
+  "properties": [
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "is_required": false,
+      "default": "Y"
+    },
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Изображение",
+      "article": "image",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Цена продажи",
+      "article": "price",
+      "type": "float",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Производитель",
+      "article": "manufacturer_id",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Колличество",
+      "article": "count",
+      "type": "integer",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "text",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Потставка",
+      "article": "supply",
+      "type": "varchar(75)",
+      "default": null,
+      "is_required": "N"
+    }
+  ]
+}

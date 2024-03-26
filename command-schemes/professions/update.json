@@ -1,7 +1,0 @@
-{
-  "title": "Редактирование",
-  "type": "update",
-  "object_scheme": "professions",
-  "required_permissions": ["settings_professions"],
-  "required_modules": []
-}

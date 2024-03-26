@@ -10,21 +10,22 @@
  */
 $userVisitsGraph = [];
 
-
 /**
  * Получение посещений Сотрудника
  */
 $userVisits = $API->DB->from( "visits" )
-    ->select( null )->select( [ "visits.id", "visits.start_at", "visits.is_active", "visits.status" ] )
-    ->where( [
-        "user_id" => $requestData->user_id,
-        "visits.start_at >= ?" => date(
-            "Y-m-d", strtotime( "-30 days", strtotime( date( "Y-m-d" ) ) )
-        )
-    ] )
-    ->orderBy( "visits.start_at desc" )
-    ->limit( 0 );
+    ->where( "( user_id = $requestData->user_id OR assist_id = $requestData->user_id )" )
+    ->where([
+        "start_at >= ?" => date("Y-m-d", strtotime("-1 months")) . " 00:00:00",
+        "start_at <= ?" => date( "Y-m-d" ) . " 23:59:59"
+    ]);
 
+$userEquipmentVisits = $API->DB->from( "equipmentVisits" )
+    ->where( "( user_id = $requestData->user_id OR assist_id = $requestData->user_id )" )
+    ->where( [
+        "start_at >= ?" => date("Y-m-d", strtotime("-1 months")) . " 00:00:00",
+        "start_at <= ?" => date( "Y-m-d" ) . " 23:59:59"
+    ] );
 
 /**
  * Формирование графика посещений
@@ -36,6 +37,14 @@ foreach ( $userVisits as $userVisit ) {
     $userVisitsGraph[ $visitDate ]++;
 
 } // foreach. $userVisits
+
+foreach ( $userEquipmentVisits as $userEquipmentVisit ) {
+
+    $visitDate = date( "Y-m-d", strtotime( $userEquipmentVisit[ "start_at" ] ) );
+    $userVisitsGraph[ $visitDate ]++;
+
+} // foreach. $userEquipmentVisits
+
 
 function num_word ( $value, $words, $show = true ) { // function. num_word() for declension of nouns after the numeral
 
@@ -69,7 +78,7 @@ $API->returnResponse(
 
     [
         [
-            "value" => num_word( count( $userVisits ), [ 'посещение', 'посещения', 'посещений' ]),
+            "value" => num_word( ( count( $userVisits ) + count( $userEquipmentVisits ) ) , [ 'посещение', 'посещения', 'посещений' ]),
             "description" => "за 30 дней",
             "icon" => "",
             "prefix" => "",

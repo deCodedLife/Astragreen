@@ -1,7 +1,0 @@
-{
-  "title": "Удаление",
-  "type": "remove",
-  "object_scheme": "visits",
-  "required_permissions": [],
-  "required_modules": []
-}

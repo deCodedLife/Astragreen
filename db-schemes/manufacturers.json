@@ -1,0 +1,19 @@
+{
+  "title": "Производители",
+  "properties": [
+    {
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y",
+      "title": "Название",
+      "article": "title"
+    },
+    {
+      "title": "Описание",
+      "article": "description",
+      "type": "text",
+      "default": null,
+      "is_required": "N"
+    }
+  ]
+}

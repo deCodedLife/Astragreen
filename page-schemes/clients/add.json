@@ -33,20 +33,7 @@
                   "last_name",
                   "first_name",
                   "patronymic",
-                  "gender",
-                  "birthday",
-                  "advertise_id"
-                ]
-              },
-              {
-                "title": "Контакты",
-                "fields": [
-                  "phone",
-                  "second_phone",
-                  "email",
-                  "address",
-                  "geolocation",
-                  "client_groups"
+                  "gender"
                 ]
               }
             ]
@@ -55,34 +42,11 @@
             "size": 2,
             "blocks": [
               {
-                "title": "Документы",
+                "title": "Контакты",
                 "fields": [
-                  "passport_series",
-                  "passport_number",
-                  "passport_issued",
-                  "is_representative"
-                ]
-              },
-              {
-                "title": "Законный представитель",
-                "fields": [
-                  "present_last_name",
-                  "present_first_name",
-                  "present_patronymic",
-                  "present_passport_series",
-                  "present_passport_number",
-                  "present_passport_issued"
-                ]
-              }
-            ]
-          },
-          {
-            "size": 4,
-            "blocks": [
-              {
-                "title": "",
-                "fields": [
-                  "comment"
+                  "phone",
+                  "second_phone",
+                  "email"
                 ]
               }
             ]

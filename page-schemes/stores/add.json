@@ -1,1 +1,72 @@
-{"required_modules":[],"required_permissions":[],"structure":[{"title":"Шапка","type":"header","size":4,"settings":{"description":"Филиалы - Добавление","title":["Добавление филиалы"]},"components":{"buttons":[]}},{"title":"Форма","type":"form","size":4,"settings":{"object":"stores","command":"add","areas":[{"size":2,"blocks":[{"title":"Основное","fields":["title","is_queue","is_operating"]}]},{"size":2,"blocks":[{"title":"Расписание","fields":["schedule_from","schedule_to"]}]}]},"components":{"buttons":[{"type":"submit","settings":{"title":"Сохранить","background":"dark","href":"stores"}}]}}]}
+{
+  "required_modules": [],
+  "required_permissions": [],
+  "structure": [
+    {
+      "title": "Шапка",
+      "type": "header",
+      "size": 4,
+      "settings": {
+        "description": "Филиалы - Добавление",
+        "title": [
+          "Добавление филиалы"
+        ]
+      },
+      "components": {
+        "buttons": []
+      }
+    },
+    {
+      "title": "Форма",
+      "type": "form",
+      "size": 4,
+      "settings": {
+        "object": "stores",
+        "command": "add",
+        "areas": [
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Основное",
+                "fields": [
+                  "title",
+                  "post_index",
+                  "phone",
+                  "email"
+                ]
+              }
+            ]
+          },
+          {
+            "size": 2,
+            "blocks": [
+              {
+                "title": "Расписание",
+                "fields": [
+                  "article",
+                  "district",
+                  "city",
+                  "region",
+                  "country"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "components": {
+        "buttons": [
+          {
+            "type": "submit",
+            "settings": {
+              "title": "Сохранить",
+              "background": "dark",
+              "href": "stores"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

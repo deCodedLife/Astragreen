@@ -1,18 +1,19 @@
 {
   "required_modules": [],
-  "required_permissions": [],
   "structure": [
     {
       "title": "Шапка",
       "type": "header",
       "size": 4,
       "settings": {
-        "description": "Изменение колличества",
+        "description": "Складские остатки - Изменение",
         "title": [
-          "Складские остатки"
+          "Изменение складских остатков"
         ]
       },
-      "components": []
+      "components": {
+        "buttons": []
+      }
     },
     {
       "title": "Форма",
@@ -23,12 +24,17 @@
         "command": "update",
         "areas": [
           {
-            "size": 1,
+            "size": 4,
             "blocks": [
               {
-                "title": "",
+                "title": "Основное",
                 "fields": [
-                  "count"
+                  "image",
+                  "title",
+                  "price",
+                  "count",
+                  "manufacturer_id",
+                  "description"
                 ]
               }
             ]
@@ -41,7 +47,8 @@
             "type": "submit",
             "settings": {
               "title": "Сохранить",
-              "href": "consumables"
+              "background": "dark",
+              "href": "warehouses"
             }
           }
         ]

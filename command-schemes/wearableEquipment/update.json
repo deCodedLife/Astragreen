@@ -1,7 +1,0 @@
-{
-  "title": "Редактирование",
-  "type": "update",
-  "object_scheme": "wearableEquipment",
-  "required_permissions": [ "users_update" ],
-  "required_modules": []
-}

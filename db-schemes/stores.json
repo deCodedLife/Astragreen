@@ -1,1 +1,75 @@
-{"title":"Филиалы","properties":[{"title":"Название","article":"title","type":"varchar(255)","default":null,"is_required":"Y"},{"title":"График работы (от)","article":"schedule_from","type":"time","default":"00:00","is_required":"Y"},{"title":"График работы (до)","article":"schedule_to","type":"time","default":"00:00","is_required":"Y"},{"title":"Активность (Y/N)","article":"is_active","type":"char(1)","default":"Y","is_required":"Y"},{"title":"Есть электронная очередь","article":"is_queue","type":"char(1)","default":"N","is_required":"N"},{"title":"Есть операционный кабинет","article":"is_operating","type":"char(1)","default":"N","is_required":"N"}]}
+{
+  "title": "Филиалы",
+  "properties": [
+    {
+      "title": "Название",
+      "article": "title",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "Y"
+    },
+    {
+      "title": "Индекс",
+      "article": "post_index",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Телефон",
+      "article": "phone",
+      "type": "varchar(25)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Email",
+      "article": "email",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Артикул",
+      "article": "article",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Район",
+      "article": "district",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Город",
+      "article": "city",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Область",
+      "article": "region",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Страна",
+      "article": "country",
+      "type": "varchar(255)",
+      "default": null,
+      "is_required": "N"
+    },
+    {
+      "title": "Активность (Y/N)",
+      "article": "is_active",
+      "type": "char(1)",
+      "default": "Y",
+      "is_required": "Y"
+    }
+  ]
+}
